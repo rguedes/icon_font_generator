@@ -22,13 +22,18 @@ class %CLASS_NAME% {
 %INDENT%%INDENT%};
 }
 
-static dynamic get(String propertyName) {
-    var _mapRep = _toMap();
-    if (_mapRep.containsKey(propertyName)) {
-        return _mapRep[propertyName];
-    }
-    throw ArgumentError('Icon not found');
-}
+%INDENT%static dynamic has(String propertyName) {
+%INDENT%%INDENT%var _mapRep = _toMap();
+%INDENT%%INDENT%_mapRep.containsKey(propertyName)
+%INDENT%}
+
+%INDENT%static dynamic get(String propertyName) {
+%INDENT%%INDENT%var _mapRep = _toMap();
+%INDENT%%INDENT%if (_mapRep.containsKey(propertyName)) {
+%INDENT%%INDENT%%INDENT%return _mapRep[propertyName];
+%INDENT%%INDENT%}
+%INDENT%%INDENT%throw ArgumentError('Icon not found');
+%INDENT%}
 
 %INDENT%
 %CONTENT%
