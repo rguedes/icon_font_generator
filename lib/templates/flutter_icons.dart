@@ -17,9 +17,9 @@ class %CLASS_NAME% {
 %INDENT%%CLASS_NAME%._();
 
 %INDENT%static Map<String, dynamic> _toMap() {
-%INDENT%return {
-%INDENT%%INDENT%%MAP%
-%INDENT%}
+%INDENT%%INDENT%return {
+%INDENT%%INDENT%%INDENT%%MAP%
+%INDENT%%INDENT%}
 }
 
 static dynamic get(String propertyName) {
