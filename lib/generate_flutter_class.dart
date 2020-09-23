@@ -32,6 +32,7 @@ Future<GenerateResult> generateFlutterClass({
   final dartIconsMapEntries = icons.entries.map(
     (entry) => someReplace(
       template.icon_map.replaceAll('%ICON_NAME%', ReCase(entry.key).camelCase),
+      className: className,
       indent: indent,
     ),
   );
