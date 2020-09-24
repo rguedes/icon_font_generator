@@ -24,7 +24,7 @@ class %CLASS_NAME% {
 
 %INDENT%static dynamic has(String propertyName) {
 %INDENT%%INDENT%var _mapRep = _toMap();
-%INDENT%%INDENT%_mapRep.containsKey(propertyName)
+%INDENT%%INDENT%_mapRep.containsKey(propertyName);
 %INDENT%}
 
 %INDENT%static dynamic get(String propertyName) {
